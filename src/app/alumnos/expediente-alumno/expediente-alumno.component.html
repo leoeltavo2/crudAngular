@@ -1,0 +1,23 @@
+<h1 class="mt-5 px-5">EXPEDIENTE DEL ALUMNO</h1>
+<div class="contenedor px-5">
+    <ul class="list-group mx-auto mb-1">
+        <li class="list-group-item" *ngFor="let item of alumnos">
+
+            <h5>Nombre(s):{{item.nombre}}</h5>
+            <h5>Apellido(s): {{item.apellido}}</h5>
+            <h5>Correo: {{item.correo}}</h5>
+            <h5>Número de Control: {{item.control}}</h5>
+            <h5>Carrera: {{item.carrera}}</h5>
+            <h5>Semestre: {{item.semestre}}</h5>
+
+        </li>
+    </ul>
+</div>
+
+<section class="datos-personales">
+    <app-datos-personales></app-datos-personales>
+</section>
+
+<section class="calificaciones">
+    <app-calificaciones></app-calificaciones>
+</section>

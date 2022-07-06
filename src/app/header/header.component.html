@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand text-primary font-weight-bold text-uppercase" href="#">
+        Escuela
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mr-5">
+            <li class="nav-item dropdown">
+                <!-- alumnos -->
+                <a class="nav-link dropdown-toggle text-primary" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Alumnos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item " routerLink="/registrarA" routerLinkActive="active">Registrar Alumno</a>
+                    <a class="dropdown-item" routerLink="/expedienteA" routerLinkActive="active">Expediente del
+                        Alumno</a>
+                </div>
+            </li>
+            <!-- profesores -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-primary" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Profesores
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" routerLink="/registrarP" routerLinkActive="active">Registrar Profesor</a>
+                    <a class="dropdown-item" routerLink="/expedienteP" routerLinkActive="active">Expediente del
+                        Profesor</a>
+                </div>
+            </li>
+            <!-- escolares -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-primary" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Escolares
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" routerLink="/titulacion" routerLinkActive="active">Titulación</a>
+                    <a class="dropdown-item" routerLink="/constancia" routerLinkActive="active">Contancias</a>
+                </div>
+            </li>
+            <!-- coordinadores -->
+            <li class="nav-item dropdown">
+                <a class="nav-link text-primary dropdown-toggle text-primary" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Coordinadores</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" routerLink="/registrarA" routerLinkActive="active">Registrar Alumno</a>
+                    <a class="dropdown-item" routerLink="/calificacionA" routerLinkActive="active">Calificación del
+                        Alumno</a>
+                    <a class="dropdown-item" routerLink="/registrarP" routerLinkActive="active">Registrar Profesor</a>
+                    <a class="dropdown-item" routerLink="/materias" routerLinkActive="active">Materias Impartidas</a>
+                    <a class="dropdown-item" routerLink="/horario" routerLinkActive="active">Horarios del profesor</a>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</nav>

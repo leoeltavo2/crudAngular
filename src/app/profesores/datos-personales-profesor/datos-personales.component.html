@@ -1,0 +1,13 @@
+<h1 class="mt-5 px-5">DATOS PERSONALES DEL PROFESOR</h1>
+<div class="contenedor px-5">
+    <ul class="list-group mx-auto mb-5">
+        <li class="list-group-item" *ngFor="let item of profesorData">
+
+            <h5>Nombre(s):{{item.nombre}}</h5>
+            <h5>Apellido(s):{{item.apellido}}</h5>
+            <h5>Correo:{{item.correo}}</h5>
+            <h5>Domicilio:{{item.domicilio}}</h5>
+            <h5>Teléfono: {{item.telefono}}</h5>
+        </li>
+    </ul>
+</div>

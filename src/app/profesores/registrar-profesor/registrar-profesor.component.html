@@ -1,0 +1,105 @@
+<div class="contenedor px-5">
+    <h1 class="mt-5">REGISTRAR PROFESOR</h1>
+
+    <form class="mb-5 mx-auto" (ngSubmit)="onSubmit()" #f="ngForm">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="nombre">Nombre(s)</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Escribe tu(s) nombre(s)" required
+                    ngModel name="nombreP" validated #nombrePr="ngModel" [(ngModel)]="name">
+                <p class="text-danger text-uppercase" *ngIf="!nombrePr.valid && nombrePr.touched">Escribe correctamente
+                    tu(s) nombre(s)
+                </p>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="apellido">Apellido(s)</label>
+                <input type="text" class="form-control" id="apellido" placeholder="Escribe tu(s) apellido(s)" required
+                    ngModel name="apellidoP" validated #apellidoPr="ngModel" [(ngModel)]="lastName">
+                <p class="text-danger text-uppercase" *ngIf="!apellidoPr.valid && apellidoPr.touched">Escribe
+                    correctamente tu(s)
+                    apellido(s)
+                </p>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="correo">Correo</label>
+                <input type="email" class="form-control" id="correo" placeholder="Escribe tu correo" required ngModel
+                    name="correoP" email validated #correoPr="ngModel" [(ngModel)]="email">
+                <p class="text-danger text-uppercase" *ngIf="!correoPr.valid && correoPr.touched">Escribe correctamente
+                    tu correo
+                </p>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="noControl">Número de Control</label>
+                <input type="number" class="form-control" id="noControl" maxlength="8" required ngModel
+                    name="noControlP" validated #numero="ngModel" [(ngModel)]="number">
+                <p class="text-danger text-uppercase" *ngIf="!numero.valid && numero.touched">Número de control erroneo
+                    (8 digítos máximo)
+                </p>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-8">
+                <label for="departamento">Departamento</label>
+                <select class="form-control" id="departamento" required ngModel name="departamento" [(ngModel)]="depa">
+                    <option selected>Seleccione el departamento</option>
+                    <option>Departamento de Sistemas</option>
+                    <option>Departamento de Electrónica</option>
+                    <option>Departamento de Mecánica</option>
+                    <option>Departamento de Ciencias</option>
+                    <option>Departamento de Bioquimica</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="plaza">Plaza</label>
+                <select class="form-control" id="plaza" required ngModel name="plaza" [(ngModel)]="plaza">
+                    <option selected>Selecciona la plaza</option>
+                    <option>Profesor Interino</option>
+                    <option>Profesor de Base</option>
+                    <option>Profesor de Honorarios</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-8">
+                <label for="domicilio">Domicilio</label>
+                <input type="text" class="form-control" id="domicilio" placeholder="alvaro Obregon, #515, Morelia,Mich."
+                    required ngModel name="domicilioP" validated [(ngModel)]="home" #domicilioP="ngModel">
+                <p class="text-danger text-uppercase" *ngIf="!domicilioP.valid && domicilioP.touched">Escribe el
+                    domicilio de tu casa
+                </p>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="telefono">Teléfono</label>
+                <input type="number" class="form-control" id="telefono" placeholder="44423232" maxlength="10" required
+                    ngModel name="telefonoP" validated [(ngModel)]="phone" #telP="ngModel">
+                <p class="text-danger text-uppercase" *ngIf="!telP.valid && telP.touched"> telefono erroneo
+                    (10 digítos máximo)
+                </p>
+            </div>
+        </div>
+
+        <div class="form-check form-check mb-4" *ngFor="let gen of genero">
+            <input class="form-check-input" type="radio" name="gen" id="inlineRadio1" ngModel [value]="gen" checked
+                required validated>
+            <label class="form-check-label" for="inlineRadio1">{{gen}}</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Registrar</button>
+    </form>
+
+    <div class="datos-formulario" *ngIf="submitted">
+        <p *ngIf="submitted">Nombre(s) del profesor: <span class="font-weight-bold">{{profesor.name}}</span></p>
+        <p *ngIf="submitted">Apellido(s) del profesor: <span class="font-weight-bold">{{profesor.lastName}}</span></p>
+        <p *ngIf="submitted">Género del profesor: <span class="font-weight-bold">{{profesor.gen}}</span></p>
+        <p *ngIf="submitted">correo del profesor: <span class="font-weight-bold">{{profesor.email}}</span></p>
+        <p *ngIf="submitted">Número de control del profesor: <span class="font-weight-bold">{{profesor.number}}</span>
+        </p>
+        <p *ngIf="submitted">Departamento del profesor: <span class="font-weight-bold">{{profesor.depa}}</span></p>
+        <p *ngIf="submitted">Plaza del profesor: <span class="font-weight-bold">{{profesor.plaza}}</span></p>
+        <p *ngIf="submitted">Domicilio del profesor: <span class="font-weight-bold">{{profesor.home}}</span></p>
+        <p *ngIf="submitted">Teléfono del profesor: <span class="font-weight-bold">{{profesor.phone}}</span></p>
+    </div>
+</div>

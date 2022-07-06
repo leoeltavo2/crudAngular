@@ -1,0 +1,18 @@
+<div class="imagen">
+    <img src="https://static.wixstatic.com/media/f6007f_aac22e1c95b44f4da1b8b199ddf984bf~mv2_d_7056_3464_s_4_2.jpg/v1/fill/w_980,h_257,al_c,q_80,usm_0.66_1.00_0.01/f6007f_aac22e1c95b44f4da1b8b199ddf984bf~mv2_d_7056_3464_s_4_2.webp"
+        alt="titulacion">
+</div>
+<div class="proximos-egresados mt-5 mb-5">
+    <h2>ALUMNOS PROXIMOS A EGRESAR</h2>
+    <div class="list-group">
+        <a href="/titulacion" class="list-group-item list-group-item-action" *ngFor="let item of titulacion">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Nombre del alumno: <span
+                        class="font-weight-bold">{{item.nombre}}{{item.apellido}}</span></h5>
+            </div>
+            <p>Número de control: <span class="font-weight-bold">{{item.control}}</span></p>
+            <p>Carrera del alumno: <span class="font-weight-bold">{{item.carrera}}</span></p>
+            <p>Se titulo por: <span class="font-weight-bold">{{item.titulacion}}</span></p>
+        </a>
+    </div>
+</div>

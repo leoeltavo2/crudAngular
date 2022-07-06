@@ -1,0 +1,24 @@
+<h1 class="mt-5 px-5">EXPEDIENTE DEL PROFESOR</h1>
+<div class="contenedor px-5">
+    <ul class="list-group mx-auto mb-1">
+        <li class="list-group-item" *ngFor="let item of profesor">
+
+            <h5>Nombre(s):{{item.nombre}}</h5>
+            <h5>Apellido(s): {{item.apellido}}</h5>
+            <h5>Correo: {{item.correo}}</h5>
+            <h5>Número de Control: {{item.control}}</h5>
+            <h5>Departamento: {{item.departamento}}</h5>
+            <h5>Plaza: {{item.plaza}}</h5>
+
+        </li>
+    </ul>
+</div>
+<section class="datos-personales">
+    <app-datos-personales></app-datos-personales>
+</section>
+<section class="materias-impartidas">
+    <app-materias-impartidas></app-materias-impartidas>
+</section>
+<section class="horarios-materias">
+    <app-horario></app-horario>
+</section>

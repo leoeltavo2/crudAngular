@@ -1,0 +1,8 @@
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+.datos-formulario{
+    background: rgb(195, 195, 255);
+    padding: 25px;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,14 @@
+<h1 class="mt-5 px-5">MATERIAS QUE IMPARTE EL PROFESOR</h1>
+<div class="contenedor px-5">
+    <ul class="list-group mx-auto mb-1">
+        <li class="list-group-item" *ngFor="let item of profesorMat">
+
+            <h5>Nombre(s):{{item.nombre}}</h5>
+            <h5>Apellido(s): {{item.apellido}}</h5>
+            <h3>MATERIAS:</h3>
+            <h5>Materia 1: {{item.materia1}}</h5>
+            <h5>Materia 2: {{item.materia2}}</h5>
+            <h5>Materia 3: {{item.materia3}}</h5>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,13 @@
+<h1 class="mt-5 px-5">HORARIOS DE MATERIAS PROFESOR</h1>
+<div class="contenedor px-5">
+    <ul class="list-group mx-auto mb-1">
+        <li class="list-group-item" *ngFor="let item of horario">
+
+            <h5>Nombre(s):{{item.nombre}}</h5>
+            <h5>Apellido(s): {{item.apellido}}</h5>
+            <h5>horario de la materia {{item.materia1}}: {{item.hmateria1}}</h5>
+            <h5>horario de la materia {{item.materia2}}: {{item.hmateria2}}</h5>
+            <h5>horario de la materia {{item.materia3}}: {{item.hmateria3}}</h5>
+        </li>
+    </ul>
+</div>
